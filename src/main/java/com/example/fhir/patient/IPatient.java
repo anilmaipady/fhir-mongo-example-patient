@@ -18,9 +18,7 @@ public interface IPatient {
     Patient read(FhirContext ctx, IdType theId);
 
     List<Resource> search (FhirContext ctx,
-
                            @OptionalParam(name= Patient.SP_BIRTHDATE) DateRangeParam birthDate,
-
                            @OptionalParam(name = Patient.SP_FAMILY) StringParam familyName,
                            @OptionalParam(name= Patient.SP_GENDER) StringParam gender ,
                            @OptionalParam(name= Patient.SP_GIVEN) StringParam givenName ,

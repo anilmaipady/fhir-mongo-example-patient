@@ -21,7 +21,6 @@ public class FhirRestfulServer extends RestfulServer {
     protected void initialize() throws ServletException{
         super.initialize();
         setFhirContext(FhirContext.forDstu3());
-        //setFhirContext(FhirContext.forR4());
         setResourceProviders(Arrays.asList(
                 applicationContext.getBean(PatientProvider.class)));
     }

@@ -72,32 +72,4 @@ public class PatientProvider implements IResourceProvider {
         }
         return method;
     }
-
-    /*
-    @Search()
-    public List<Resource> getAllPatients() {
-        return patientDao.search(ctx);
-    }
-     */
-
-
-
-    /*
-    @Delete()
-    public void delete(@IdParam  IdType  theId) {
-        patientDao.delete(ctx,theId);
-    }
-     */
-
-
-    private void loadDummyPatients() {
-        Patient patient = new Patient();
-        patient.setId("1");
-        patient.addIdentifier().setSystem("http://optum.com/MRNs").setValue("007");
-        patient.addName().setFamily("Chakravarty").addGiven("Mithun").addGiven("A");
-        patient.addAddress().addLine("Address Line 1");
-        patient.addAddress().setCity("Mumbai");
-        patient.addAddress().setCountry("India");
-        patient.addTelecom().setValue("111-111-1111");
-    }
 }

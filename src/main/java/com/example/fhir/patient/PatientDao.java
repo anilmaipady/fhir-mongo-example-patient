@@ -105,12 +105,8 @@ public class PatientDao implements IPatient {
 
     @Override
     public List<Resource> search(FhirContext ctx, DateRangeParam birthDate, StringParam familyName, StringParam gender, StringParam givenName, TokenParam identifier, StringParam name) {
-
         List<Resource> resources = new ArrayList<>();
-
         Criteria criteria = null;
-
-        // http://127.0.0.1:8181/STU3/Patient?identifier=https://fhir.leedsth.nhs.uk/Id/pas-number|LOCAL1098
         if (identifier != null) {
             if (criteria ==null) {
                 criteria = Criteria.where("identifiers.system").is(identifier.getSystem()).and("identifiers.value").is(identifier.getValue());
