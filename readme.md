@@ -1,3 +1,11 @@
+Change following matching to your MongoDB on application.properties
+
+spring.data.mongodb.uri=mongodb://localhost:30001/
+
+Start server:
+
+mvn spring-boot:run
+
 Create Patient:
 
 cd patient/src/main/resources
